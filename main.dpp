@@ -1,0 +1,28 @@
+let str = scan();
+let arr = slice(str);
+let i = 0;
+let a[] = {};
+let min = strtonum(at(arr, 0));
+let max = strtonum(at(arr, 0));
+let x = 0;
+let sum = 0;
+let average = 0;
+while (i < count(arr)) {
+    push(a, strtonum(at(arr, i)));
+    i = i + 1;
+}
+i = 1;
+sum = sum + at(a, 0);
+while (i < count(a)) {
+    x = at(a, i);
+    sum = sum + x;
+    if (x < min) {
+        min = x;
+    }
+    if (x > max) {
+        max = x;
+    }
+    i = i + 1;
+}
+average = sum / count(a);
+print("len = ", count(a), "min = ", min, "max = ", max, "sum = ", sum, "average = ", average);

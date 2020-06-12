@@ -1,0 +1,24 @@
+<let><ID,str><=><ID,scan><(><)><;>
+<let><ID,arr><=><ID,slice><(><ID,str><)><;>
+<let><ID,i><=><NUM,0><;>
+<let><ID,a><[><]><=><{><}><;>
+<let><ID,min><=><ID,strtonum><(><ID,at><(><ID,arr><,><NUM,0><)><)><;>
+<let><ID,max><=><ID,strtonum><(><ID,at><(><ID,arr><,><NUM,0><)><)><;>
+<let><ID,x><=><NUM,0><;>
+<let><ID,sum><=><NUM,0><;>
+<let><ID,average><=><NUM,0><;>
+<while><(><ID,i><<><ID,count><(><ID,arr><)><)><{>
+<ID,push><(><ID,a><,><ID,strtonum><(><ID,at><(><ID,arr><,><ID,i><)><)><)><;>
+<ID,i><=><ID,i><+><NUM,1><;>
+<}><ID,i><=><NUM,1><;>
+<ID,sum><=><ID,sum><+><ID,at><(><ID,a><,><NUM,0><)><;>
+<while><(><ID,i><<><ID,count><(><ID,a><)><)><{>
+<ID,x><=><ID,at><(><ID,a><,><ID,i><)><;>
+<ID,sum><=><ID,sum><+><ID,x><;>
+<if><(><ID,x><<><ID,min><)><{>
+<ID,min><=><ID,x><;>
+<}><if><(><ID,x><>><ID,max><)><{>
+<ID,max><=><ID,x><;>
+<}><ID,i><=><ID,i><+><NUM,1><;>
+<}><ID,average><=><ID,sum></><ID,count><(><ID,a><)><;>
+<ID,print><(><STR,"len = "><,><ID,count><(><ID,a><)><,><STR,"min = "><,><ID,min><,><STR,"max = "><,><ID,max><,><STR,"sum = "><,><ID,sum><,><STR,"average = "><,><ID,average><)><;>
